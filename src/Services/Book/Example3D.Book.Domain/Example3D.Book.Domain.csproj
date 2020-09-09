@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <Folder Include="AggregatesModel\" />
+        <Folder Include="AggregatesModel\BookAggregate\" />
+        <Folder Include="AggregatesModel\BookAggregate\Events\" />
+        <Folder Include="AggregatesModel\BookAggregate\Service\" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Shared\Example3D.Domain.Core\Example3D.Domain.Core.csproj" />
+      <ProjectReference Include="..\..\..\Shared\Example3D.Infrastructure.Core\Example3D.Infrastructure.Core.csproj" />
+    </ItemGroup>
+</Project>
