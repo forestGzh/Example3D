@@ -27,12 +27,6 @@ namespace Example3D.Account.API.Controllers
             _accountQueries = accountQueries ?? throw new ArgumentNullException(nameof(accountQueries));
         }
 
-        //[HttpGet("time")]
-        //public ActionResult<object> Get()
-        //{
-        //    return DateTime.Now.ToString();
-        //}
-
         [Route("account")]
         [HttpPost]
         [ProducesResponseType((int)HttpStatusCode.OK)]
