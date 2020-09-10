@@ -76,7 +76,7 @@ namespace Example3D.Infrastructure.Core
 
         public async Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default)
         {
-            await base.SaveChangesAsync(cancellationToken);
+            //await base.SaveChangesAsync(cancellationToken);
 
             await _mediator.DispatchDomainEventsAsync(this);
 
