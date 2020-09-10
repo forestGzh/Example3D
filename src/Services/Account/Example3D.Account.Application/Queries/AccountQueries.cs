@@ -15,6 +15,7 @@ namespace Example3D.Account.Application.Queries
     {
         private readonly string _connectionString = string.Empty;
         private readonly IAccountRepository _accountRepository;
+
         public AccountQueries(IOptions<DomainDbSettings> options, IAccountRepository accountRepository)
         {
             _connectionString = options.Value.ConectionString;

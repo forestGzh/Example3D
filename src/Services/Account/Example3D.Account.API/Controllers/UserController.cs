@@ -52,13 +52,33 @@ namespace Example3D.Account.API.Controllers
         [HttpGet]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public async Task<ActionResult> CreateAccountsAsync()
+        public async Task<ActionResult> GetAccountsAsync()
         {
             try
             {
                 var accounts = await _accountQueries.GetAccountsAsync();
 
                 _logger.LogInformation("GetAccountAsync");
+                return Ok(accounts);
+            }
+            catch
+            {
+                return NotFound();
+            }
+        }
+
+        [Route("accounts2")]
+        [HttpGet]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        public async Task<ActionResult> GetAccounts2Async()
+        {
+            try
+            {
+                AccountQuery query = new AccountQuery();
+                var accounts = await _mediator.Send(query, HttpContext.RequestAborted);
+
+                _logger.LogInformation("GetAccountAsync2");
                 return Ok(accounts);
             }
             catch
