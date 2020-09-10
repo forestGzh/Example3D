@@ -11,22 +11,22 @@ using MySql.Data.MySqlClient;
 
 namespace Example3D.Books.Application.Queries
 {
-    public class BookEntityQueries : IBookEntityQueries
+    public class BookQueries : IBookQueries
     {
         private readonly string _connectionString = string.Empty;
-        private readonly IBookEntityRepository _bookEntityRepository;
-        public BookEntityQueries(IOptions<DomainDbSettings> options, IBookEntityRepository bookEntityRepository)
+        private readonly IBookRepository _bookRepository;
+        public BookQueries(IOptions<DomainDbSettings> options, IBookRepository bookRepository)
         {
             _connectionString = options.Value.ConectionString;
-            _bookEntityRepository = bookEntityRepository;
+            _bookRepository = bookRepository;
         }
 
-        public async Task<IEnumerable<BookEntityDto>> GetBooksAsync()
+        public async Task<IEnumerable<BookDto>> GetBooksAsync()
         {
-            var result = await _bookEntityRepository.GetAllAsync();
+            var result = await _bookRepository.GetAllAsync();
 
 
-            return result.Select(x => new BookEntityDto
+            return result.Select(x => new BookDto
             {
                 Id = x.Id,
                 Name = x.Name,
@@ -36,7 +36,7 @@ namespace Example3D.Books.Application.Queries
 
     }
 
-    public class BookEntityDto
+    public class BookDto
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

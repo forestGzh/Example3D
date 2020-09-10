@@ -13,25 +13,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{40CBF1D6-D9C5-46CB-9330-105CCE7FA9F7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Account", "Account", "{759C0CB3-C11F-459F-B1E1-419583604800}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Accounts", "Accounts", "{759C0CB3-C11F-459F-B1E1-419583604800}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Book", "Book", "{42E12584-C6D4-4A26-9A91-FED3258D7B65}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Books", "Books", "{42E12584-C6D4-4A26-9A91-FED3258D7B65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Account.API", "src\Services\Account\Example3D.Account.API\Example3D.Account.API.csproj", "{E6C6F099-AC3C-45A9-8904-CD3884319BC2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Accounts.API", "src\Services\Accounts\Example3D.Accounts.API\Example3D.Accounts.API.csproj", "{E6C6F099-AC3C-45A9-8904-CD3884319BC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Account.Application", "src\Services\Account\Example3D.Account.Application\Example3D.Account.Application.csproj", "{E56D87D8-A14E-4996-910D-368001E58814}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Accounts.Application", "src\Services\Accounts\Example3D.Accounts.Application\Example3D.Accounts.Application.csproj", "{E56D87D8-A14E-4996-910D-368001E58814}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Account.Domain", "src\Services\Account\Example3D.Account.Domain\Example3D.Account.Domain.csproj", "{FEBB4CF3-6C6C-4FD9-BB04-1FCBC137DC9E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Accounts.Domain", "src\Services\Accounts\Example3D.Accounts.Domain\Example3D.Accounts.Domain.csproj", "{FEBB4CF3-6C6C-4FD9-BB04-1FCBC137DC9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Account.Infrastructure", "src\Services\Account\Example3D.Account.Infrastructure\Example3D.Account.Infrastructure.csproj", "{DDFEEA9A-2C88-42EC-808C-F2BFBFE2566C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Accounts.Infrastructure", "src\Services\Accounts\Example3D.Accounts.Infrastructure\Example3D.Accounts.Infrastructure.csproj", "{DDFEEA9A-2C88-42EC-808C-F2BFBFE2566C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Book.API", "src\Services\Book\Example3D.Book.API\Example3D.Book.API.csproj", "{8A409EF9-48CB-4473-B2B1-131A0F26E99C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Books.API", "src\Services\Books\Example3D.Books.API\Example3D.Books.API.csproj", "{8A409EF9-48CB-4473-B2B1-131A0F26E99C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Book.Application", "src\Services\Book\Example3D.Book.Application\Example3D.Book.Application.csproj", "{F3A780DA-BE75-45D9-AF1F-098698D3B052}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Books.Application", "src\Services\Books\Example3D.Books.Application\Example3D.Books.Application.csproj", "{F3A780DA-BE75-45D9-AF1F-098698D3B052}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Book.Domain", "src\Services\Book\Example3D.Book.Domain\Example3D.Book.Domain.csproj", "{80AA00C9-4721-41CC-89A0-49F8D683BA70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Books.Domain", "src\Services\Books\Example3D.Books.Domain\Example3D.Books.Domain.csproj", "{80AA00C9-4721-41CC-89A0-49F8D683BA70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Book.Infrastructure", "src\Services\Book\Example3D.Book.Infrastructure\Example3D.Book.Infrastructure.csproj", "{528AD53C-FBEA-4F22-9FEB-364384053FC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example3D.Books.Infrastructure", "src\Services\Books\Example3D.Books.Infrastructure\Example3D.Books.Infrastructure.csproj", "{528AD53C-FBEA-4F22-9FEB-364384053FC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

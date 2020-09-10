@@ -8,28 +8,28 @@ using Volo.Abp.Guids;
 
 namespace Example3D.Books.Application.Commands
 {
-    public class CreateBookEntityCommandHandler : IRequestHandler<CreateBookEntityCommand, bool>
+    public class CreateBookCommandHandler : IRequestHandler<CreateBookCommand, bool>
     {
         private readonly IGuidGenerator _guidGenerator;
-        private readonly ILogger<CreateBookEntityCommandHandler> _logger;
-        private readonly IBookEntityRepository _bookEntityRepository;
+        private readonly ILogger<CreateBookCommandHandler> _logger;
+        private readonly IBookRepository _bookRepository;
 
-        public CreateBookEntityCommandHandler(IGuidGenerator guidGenerator, ILogger<CreateBookEntityCommandHandler> logger, IBookEntityRepository bookEntityRepository)
+        public CreateBookCommandHandler(IGuidGenerator guidGenerator, ILogger<CreateBookCommandHandler> logger, IBookRepository bookRepository)
         {
             _guidGenerator = guidGenerator ?? throw new ArgumentNullException(nameof(guidGenerator));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-            _bookEntityRepository = bookEntityRepository ?? throw new ArgumentNullException(nameof(bookEntityRepository));
+            _bookRepository = bookRepository ?? throw new ArgumentNullException(nameof(bookRepository));
         }
 
-        public async Task<bool> Handle(CreateBookEntityCommand request, CancellationToken cancellationToken)
+        public async Task<bool> Handle(CreateBookCommand request, CancellationToken cancellationToken)
         {
-            Book bookEntity = new Book(_guidGenerator.Create(), request.Name, request.Quantity);
+            Book book = new Book(_guidGenerator.Create(), request.Name, request.Quantity);
 
-            _logger.LogInformation("----- Creating BookEntity - BookEntity: {@BookEntity}", bookEntity);
+            _logger.LogInformation("----- Creating Book- Book: {@Book}", book);
 
-            _bookEntityRepository.Add(bookEntity);
+            _bookRepository.Add(book);
 
-            return await _bookEntityRepository.UnitOfWork
+            return await _bookRepository.UnitOfWork
                 .SaveEntitiesAsync(cancellationToken);
 
         }

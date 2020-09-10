@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 
 namespace Example3D.Books.Application.Queries
 {
-    public interface IBookEntityQueries
+    public interface IBookQueries
     {
-        Task<IEnumerable<BookEntityDto>> GetBooksAsync();
+        Task<IEnumerable<BookDto>> GetBooksAsync();
     }
 }
