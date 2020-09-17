@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Example3D.API": {
+    "Example3D.Accounts.API": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "/swagger/index.html",

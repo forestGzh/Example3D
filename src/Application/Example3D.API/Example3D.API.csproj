@@ -6,14 +6,6 @@
         <NoWarn>$(NoWarn);1591</NoWarn>
     </PropertyGroup>
     <ItemGroup>
-        <Folder Include="Infrastructure\" />
-        <Folder Include="Infrastructure\Middlewares\" />
-        <Folder Include="Infrastructure\Services\" />
-        <Folder Include="Extensions\" />
-        <Folder Include="Infrastructure\Filters\" />
-        <Folder Include="Infrastructure\AutofacModules\" />
-    </ItemGroup>
-    <ItemGroup>
         <PackageReference Include="MediatR" Version="8.1.0" />
         <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
         <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.2" />
@@ -32,25 +24,22 @@
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.7" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\Example3D.Accounts.Application\Example3D.Accounts.Application.csproj">
-            <GlobalPropertiesToRemove>
-            </GlobalPropertiesToRemove>
-        </ProjectReference>
-        <ProjectReference Include="..\Example3D.Accounts.Domain\Example3D.Accounts.Domain.csproj">
-            <GlobalPropertiesToRemove>
-            </GlobalPropertiesToRemove>
-        </ProjectReference>
-        <ProjectReference Include="..\Example3D.Accounts.Infrastructure\Example3D.Accounts.Infrastructure.csproj">
-            <GlobalPropertiesToRemove>
-            </GlobalPropertiesToRemove>
-        </ProjectReference>
-        <ProjectReference Include="..\..\..\Shared\Example3D.Domain.Core\Example3D.Domain.Core.csproj">
-            <GlobalPropertiesToRemove>
-            </GlobalPropertiesToRemove>
-        </ProjectReference>
-        <ProjectReference Include="..\..\..\Shared\Example3D.Infrastructure.Core\Example3D.Infrastructure.Core.csproj">
-            <GlobalPropertiesToRemove>
-            </GlobalPropertiesToRemove>
-        </ProjectReference>
+      <ProjectReference Include="..\Example3D.Domain\Example3D.Domain.csproj">
+        <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+      </ProjectReference>
+      <ProjectReference Include="..\Example3D.Infrastructure\Example3D.Infrastructure.csproj">
+        <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+      </ProjectReference>
+      <ProjectReference Include="..\Example3D.Application\Example3D.Application.csproj">
+        <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+      </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Extensions\" />
+      <Folder Include="Infrastructure\" />
+      <Folder Include="Infrastructure\AutofacModules\" />
+      <Folder Include="Infrastructure\Filters\" />
+      <Folder Include="Infrastructure\Middlewares\" />
+      <Folder Include="Infrastructure\Services\" />
     </ItemGroup>
 </Project>

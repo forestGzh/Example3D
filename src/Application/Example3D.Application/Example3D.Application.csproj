@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="DomainEventHandlers\" />
+    <Folder Include="Queries\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Example3D.Domain\Example3D.Domain.csproj" />
+    <ProjectReference Include="..\Example3D.Infrastructure\Example3D.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
