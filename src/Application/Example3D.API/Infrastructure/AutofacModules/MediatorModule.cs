@@ -2,6 +2,8 @@
 using System.Reflection;
 using Autofac;
 using Example3D.Application.Commands;
+using Example3D.Application.DomainEventHandlers;
+using Example3D.Domain.AggregatesModel.BookAggregate.Events;
 using Example3D.Infrastructure.Behaviors;
 using MediatR;
 
@@ -21,9 +23,9 @@ namespace Example3D.API.Infrastructure.AutofacModules
             builder.RegisterAssemblyTypes(typeof(CreateBookCommand).GetTypeInfo().Assembly)
                 .AsClosedTypesOf(typeof(IRequestHandler<,>));
 
-            //// Register the DomainEventHandler classes (they implement INotificationHandler<>) in assembly holding the Domain Events
-            //builder.RegisterAssemblyTypes(typeof(ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler).GetTypeInfo().Assembly)
-            //    .AsClosedTypesOf(typeof(INotificationHandler<>));
+            // Register the DomainEventHandler classes (they implement INotificationHandler<>) in assembly holding the Domain Events
+            builder.RegisterAssemblyTypes(typeof(BookCreatedDomainEventHandler).GetTypeInfo().Assembly)
+                .AsClosedTypesOf(typeof(INotificationHandler<>));
 
             builder.Register<ServiceFactory>(context =>
             {

@@ -1,4 +1,5 @@
 ﻿using System;
+using Example3D.Domain.AggregatesModel.BookAggregate.Events;
 using Example3D.Domain.Core;
 
 namespace Example3D.Domain.AggregatesModel.BookAggregate
@@ -18,6 +19,8 @@ namespace Example3D.Domain.AggregatesModel.BookAggregate
             Id = id;
             Name = name;
             Quantity = quantity;
+
+            this.AddDomainEvent(new BookCreatedDomainEvent());
         }
 
     }

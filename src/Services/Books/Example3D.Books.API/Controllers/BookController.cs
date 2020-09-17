@@ -52,7 +52,7 @@ namespace Example3D.Books.API.Controllers
         [HttpGet]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public async Task<ActionResult> CreateBooksAsync()
+        public async Task<ActionResult> GetBooksAsync()
         {
             try
             {

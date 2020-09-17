@@ -37,6 +37,10 @@ namespace Example3D.API.Controllers
 
             commandResult = await _mediator.Send(command);
 
+            _logger.LogInformation("CreateBookAsync2");
+            CreateBookCommand command2 = new CreateBookCommand(requestDto.Name + "2", requestDto.Quantity + "2");
+            await _mediator.Send(command2);
+
             if (!commandResult)
             {
                 return BadRequest();
@@ -49,7 +53,7 @@ namespace Example3D.API.Controllers
         [HttpGet]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public async Task<ActionResult> CreateBooksAsync()
+        public async Task<ActionResult> GetBooksAsync()
         {
             try
             {
